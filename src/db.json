@@ -1,0 +1,65 @@
+{
+  "items": {
+    "logo": {
+      "src": "../assets/icons/logo.svg",
+      "width": 88
+      
+    },
+    "iconsleftmenu": [
+      {
+        "id": 1,
+        "src": "../assets/icons/task.svg",
+        "width": 24,
+        "name": "Task"
+      },
+      {
+        "id": 2,
+        "src": "../assets/icons/calendar.svg",
+        "width": 24,
+        "name": "Calendar"
+      },
+      {
+        "id": 3,
+        "src": "../assets/icons/staff.svg",
+        "width": 24,
+        "name": "Staff"
+      },
+      {
+        "id": 4,
+        "src": "../assets/icons/replacement.svg",
+        "width": 24,
+        "name": "Replacement"
+      },
+      {
+        "id": 5,
+        "src": "../assets/icons/link.svg",
+        "width": 24,
+        "name": "Link"
+      },
+      {
+        "id": 6,
+        "src": "../assets/icons/education.svg",
+        "width": 24,
+        "name": "Education"
+      },
+      {
+        "id": 7,
+        "src": "../assets/icons/game.svg",
+        "width": 24,
+        "name": "Game"
+      },
+      {
+        "id": 8,
+        "src": "../assets/icons/feedback.svg",
+        "width": 24,
+        "name": "Feedback"
+      },
+      {
+        "id": 9,
+        "src": "../assets/icons/checks.svg",
+        "width": 24,
+        "name": "Checks"
+      }
+    ]
+  }
+}
