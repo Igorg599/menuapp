@@ -2,8 +2,8 @@
   "items": {
     "logo": {
       "src": "../assets/icons/logo.svg",
-      "width": 88
-      
+      "width": 24,
+      "name": "Libra"
     },
     "iconsleftmenu": [
       {
@@ -59,6 +59,32 @@
         "src": "../assets/icons/checks.svg",
         "width": 24,
         "name": "Checks"
+      }
+    ],
+    "iconsrightmenu": [
+      {
+        "id": 1,
+        "src": "../assets/icons/coins.svg",
+        "width": 24,
+        "name": "146 480"
+      },
+      {
+        "id": 2,
+        "src": "../assets/icons/bell.svg",
+        "width": 24,
+        "name": "Notification"
+      },
+      {
+        "id": 3,
+        "src": "../assets/icons/persone.svg",
+        "width": 24,
+        "name": "Profile"
+      },
+      {
+        "id": 4,
+        "src": "../assets/icons/exit.svg",
+        "width": 24,
+        "name": "Log out"
       }
     ]
   }

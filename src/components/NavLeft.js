@@ -14,6 +14,7 @@ const NavLeft = () => {
         <div className='navleft'>
             <div className='navleft__logo'>
                 {items && <img width={items.logo.width} src={items.logo.src} alt='dsd'/>}
+                <p>{items && items.logo.name}</p>
             </div>
             {items && 
                 items.iconsleftmenu.map(item => (
