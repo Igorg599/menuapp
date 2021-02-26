@@ -5,6 +5,11 @@
       "width": 24,
       "name": "Libra"
     },
+    "gamburger": {
+      "src": "../assets/icons/gamburger.svg",
+      "width": 24,
+      "name": "Gamburger"
+    },
     "iconsleftmenu": [
       {
         "id": 1,
@@ -59,6 +64,12 @@
         "src": "../assets/icons/checks.svg",
         "width": 24,
         "name": "Checks"
+      },
+      {
+        "id": 10,
+        "src": "../assets/icons/more.svg",
+        "width": 24,
+        "name": "More"
       }
     ],
     "iconsrightmenu": [
