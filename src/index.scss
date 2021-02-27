@@ -67,6 +67,9 @@ code {
   &__gamburger {
     display: none;
   }
+  &__selected {
+    display: none;
+  }
 }
 
 .navright {
@@ -268,6 +271,20 @@ code {
     &__popup {
       left: calc(100vw - 233px);
       margin-top: 45px;
+    }
+    &__selected {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0 8px 0 16px;
+      height: 24px;
+      align-items: center;
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        text-indent: 1px;
+        color: #FFFFFF;
+        margin-left: 8px;
+      }
     }
   }
 }
