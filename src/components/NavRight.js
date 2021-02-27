@@ -1,16 +1,16 @@
 import React from 'react'
-import axios from 'axios'
+import {useDispatch, useSelector} from 'react-redux';
+import {fetchData} from '../redux/action';
 
 const NavRight = () => {
-    const [items, setItems] = React.useState(null)
+    const dispatch = useDispatch();
+    const items = useSelector((data) => data.items);
     const [visiblePopup, setVisiblePopup] = React.useState(false);
     const sortRef = React.useRef();
 
     React.useEffect(() => {
-        axios.get('/src/db.json/items').then ((data) => {
-            setItems(data.data)
-        });
-    }, [])
+        dispatch(fetchData());
+    }, [dispatch]);
 
     const handleOutsideClick = (e) => {
         const path = e.path || (e.composedPath && e.composedPath());

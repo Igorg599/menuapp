@@ -1,9 +1,11 @@
 import React from 'react'
-import axios from 'axios'
+import {useDispatch, useSelector} from 'react-redux';
+import {fetchData} from '../redux/action';
 
 
 const NavLeft = () => {
-    const [items, setItems] = React.useState(null)
+    const dispatch = useDispatch();
+    const items = useSelector((data) => data.items);
     const [filterItems, setFilterItems] = React.useState(null)
     const [filterItemsPopUp, setFilterItemsPopUp] = React.useState(null)
     const [visiblePopup, setVisiblePopup] = React.useState(false)
@@ -11,11 +13,8 @@ const NavLeft = () => {
     const sortRef = React.useRef()
 
     React.useEffect(() => {
-        axios.get('/src/db.json/items').then ((data) => {
-            setItems(data.data)
-            setSelectedItem(data.data.iconsleftmenu[0])
-        })
-    }, [])
+        dispatch(fetchData());
+    }, [dispatch]);
 
     const setSizeScreen = (items) => {
         if (document.documentElement.clientWidth >= 1014) {
@@ -53,6 +52,9 @@ const NavLeft = () => {
     }
 
     React.useEffect(() => {
+        if (items) {
+            setSelectedItem(items.iconsleftmenu[0])
+        }
         setSizeScreen(items);
         window.addEventListener('resize', () => {
             setSizeScreen(items);
