@@ -17,40 +17,45 @@ const NavLeft = () => {
         })
     }, [])
 
+    const setSizeScreen = (items) => {
+        if (document.documentElement.clientWidth >= 1014) {
+            setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 10))
+            setFilterItemsPopUp(null)
+        }
+        if (document.documentElement.clientWidth < 1014) {
+            setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 9))
+            setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id === 9))
+        }
+        if (document.documentElement.clientWidth < 926) {
+            setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 8))
+            setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 7))
+        }
+        if (document.documentElement.clientWidth < 838) {
+            setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 7))
+            setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 6))
+        }
+        if (document.documentElement.clientWidth < 750) {
+            setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 6))
+            setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 5))
+        }
+        if (document.documentElement.clientWidth < 662) {
+            setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 5))
+            setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 4))
+        }
+        if (document.documentElement.clientWidth < 574) {
+            setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 4))
+            setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 3))
+        }
+        if (document.documentElement.clientWidth < 511) {
+            setFilterItems(null)
+            setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10))
+        }
+    }
+
     React.useEffect(() => {
+        setSizeScreen(items);
         window.addEventListener('resize', () => {
-            if (document.documentElement.clientWidth >= 1014) {
-                setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 10))
-                setFilterItemsPopUp(null)
-            }
-            if (document.documentElement.clientWidth < 1014) {
-                setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 9))
-                setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id === 9))
-            }
-            if (document.documentElement.clientWidth < 926) {
-                setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 8))
-                setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 7))
-            }
-            if (document.documentElement.clientWidth < 838) {
-                setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 7))
-                setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 6))
-            }
-            if (document.documentElement.clientWidth < 750) {
-                setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 6))
-                setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 5))
-            }
-            if (document.documentElement.clientWidth < 662) {
-                setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 5))
-                setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 4))
-            }
-            if (document.documentElement.clientWidth < 574) {
-                setFilterItems(items && items.iconsleftmenu.filter(item => item.id < 4))
-                setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10 && item.id > 3))
-            }
-            if (document.documentElement.clientWidth < 511) {
-                setFilterItems(null)
-                setFilterItemsPopUp(items && items.iconsleftmenu.filter(item => item.id < 10))
-            }
+            setSizeScreen(items);
         });
     }, [items])
 
